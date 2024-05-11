@@ -1,0 +1,17 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.stars-icon {
+  padding: 0 8px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+}
+
+.no-select {
+  cursor: pointer;
+  user-select: none;
+}
