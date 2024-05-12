@@ -1,17 +1,18 @@
 <div class='container'>
-  <mat-card class='example-card'>
+  <mat-card class='example-card' *ngFor='let product of products'>
     <mat-card-header>
-      <mat-card-title>Volkswagen Golf R (2010-2012)</mat-card-title>
+      <mat-card-title>{{product.title}}</mat-card-title>
     </mat-card-header>
-    <img class='card__image' mat-card-image src='https://images.thecarconnection.com/lrg/2011-volkswagen-golf-r_100305225_l.jpg' alt='Photo VW Golf'>
+    <img class='card__image' mat-card-image src='{{product.image}}' alt='Photo VW Golf'>
     <mat-card-content>
-      <p>Цена: 3 500 000р.</p>
-      <p>Бензиновая "турбочетверка" 2.0 TSI прошла модернизацию и прибавила символические 20 лошадиных сил. Получившихся 320 хватило, чтобы сделать хэтчбек самым мощным Golf в истории - если не считать особых "горячих" версий. Максимальный крутящий момент вырос с 400 до 420 Нм. За переключение
-        передач отвечает МКП-6 или семискоростной "робот".</p>
+      <p>{{product.price}}р.</p>
+      <p>Тип кузова: {{product.configurations.carcase}}</p>
+      <p>Привод: {{product.configurations.drive}}</p>
+      <p>Тип двигателя: {{product.configurations.engine}}</p>
     </mat-card-content>
     <mat-card-actions class='card__buttons'>
       <button mat-button color='primary'>Купить</button>
-      <button mat-button color='primary'>Поробнее</button>
+      <button mat-button color='primary'>Подробнее</button>
     </mat-card-actions>
   </mat-card>
 </div>

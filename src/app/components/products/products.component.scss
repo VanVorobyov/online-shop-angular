@@ -4,6 +4,7 @@
   align-items: center;
   padding: 24px;
   margin: 0 auto;
+  gap: 24px;
 }
 
 .example-card {
@@ -15,11 +16,19 @@
 .card__image {
   width: 100%;
   margin-bottom: 10px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .card__buttons {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+
+.card__desc {
+  max-height: 200px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
