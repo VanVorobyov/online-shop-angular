@@ -4,13 +4,14 @@ import { MatButton } from '@angular/material/button'
 import { IProducts } from '../../models/products'
 import { Subscription } from 'rxjs'
 import { ProductsService } from '../../services/products.service'
-import { NgForOf } from '@angular/common'
+import { NgForOf, CurrencyPipe } from '@angular/common'
+import { RouterLink } from '@angular/router'
 
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [MatCardModule, MatButton, NgForOf],
+  imports: [MatCardModule, MatButton, NgForOf, CurrencyPipe, RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss'
 })
